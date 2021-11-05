@@ -55,8 +55,8 @@ function Home() {
         <thead>
           <tr>
             {records.length &&
-              Object.keys(records[1]).map((f) => {
-                if (typeof f !== "object") return <td>{f}</td>;
+              Object.keys(records[1]).map((f, index) => {
+                if (typeof f !== "object") return <th key={index}>{f}</th>;
                 return null;
               })}
           </tr>
@@ -86,15 +86,6 @@ function Home() {
         ))}
       </div> */}
 
-      <div>
-        {/* {customers} */}
-        {/* {Object.entries(customers)} */}
-        {/* {Object.values(customers).map((record, index) => (
-          <div key={index}>
-            <h2>{record}</h2>
-          </div>
-        ))} */}
-      </div>
     </div>
   );
 }
